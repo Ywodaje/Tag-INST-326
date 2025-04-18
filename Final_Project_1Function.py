@@ -1,45 +1,46 @@
-import random
-
-def place_random_items(grid_size, player_positions, num_items=3):
+def place_players_and_hiding_spots(grid_size=4):
     """
-    This function picks random spots on the grid to put items 
-    like hiding spots or power-ups, but not where players are.
-
+    This function places players and hiding spots on a 4x4 grid.
+    The grid is represented as a list of coordinates, and the function
+    places players and hiding spots, ensuring no overlap.
+    
     Args:
-        grid_size: a tuple like (rows, columns)
-        player_positions: list of spots where players are
-        num_items: how many items to place (default is 3)
-
+        grid_size (int): The size of the grid (default is 4).
+    
     Returns:
-        A list of positions where items are placed
+        tuple: A dictionary of player names with their positions,
+               and a list of hiding spot positions.
     """
+    # List of players, including the tagger
+    players = ["Jake", "Abraham", "Ruth", "Maya", "Sara", "Henry"]  # 6 players
+    player_positions = {}
+    taken_positions = []
 
-    # Step 1: Make a list of all grid positions
-    all_spots = []
-    for row in range(grid_size[0]):
-        for col in range(grid_size[1]):
-            all_spots.append((row, col))
+    # Assign positions for players in a sequence
+    position_sequence = [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1)]  # Adjust for grid size
+    for i, player in enumerate(players):
+        player_positions[player] = position_sequence[i]  # Assign position from the sequence
+        taken_positions.append(position_sequence[i])  # Add to taken positions
 
-    # Step 2: Remove player positions
-    open_spots = []
-    for spot in all_spots:
-        if spot not in player_positions:
-            open_spots.append(spot)
+    # Assign hiding spots
+    hiding_spots = [(2, 2), (3, 3), (1, 2)]  
+    for spot in hiding_spots:
+        taken_positions.append(spot)  # Mark as taken spots
 
-    # Step 3: Check if enough room
-    if num_items > len(open_spots):
-        print("Not enough space for items.")
-        return []
-
-    # Step 4: Pick random spots for the items
-    item_spots = random.sample(open_spots, num_items)
-
-    return item_spots
+    return player_positions, hiding_spots
 
 
-# Test the function with fake data
+# Test the function
 if __name__ == "__main__":
-    grid = (5, 5)
-    players = [(0, 0), (2, 2), (3, 4)]
-    items = place_random_items(grid, players, 3)
-    print("Items placed at:", items)
+    players, hiding_spots = place_players_and_hiding_spots()
+
+    print("Players and their positions:")
+    for player, position in players.items():
+        if player == "Henry":
+            print(f"{player} (Tagger): {position}")
+        else:
+            print(f"{player} (Player): {position}")
+
+    print("Hiding spots:")
+    for spot in hiding_spots:
+        print(spot)
