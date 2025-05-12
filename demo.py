@@ -19,8 +19,8 @@ def place_players_and_hiding_spots(grid_size=4):
     # Predefined positions
     position_sequence = [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1)]
     for i, player in enumerate(players):
-        player_positions[player] = position_sequence[i]  # Assign position from the sequence
-        taken_positions.append(position_sequence[i])  # Add to taken positions
+        player_positions[player] = position_sequence[i]  
+        taken_positions.append(position_sequence[i])  
 
     # Assign hiding spots
     hiding_spots = [(2, 2), (3, 3), (1, 2)]
@@ -47,7 +47,7 @@ def check_for_tag(player_positions):
 
     for name, position in player_positions.items():
         if name == tagger_name:
-            continue  # Don't check tagger against themselves
+            continue  
 
         row_diff = abs(tagger_pos[0] - position[0])
         col_diff = abs(tagger_pos[1] - position[1])
