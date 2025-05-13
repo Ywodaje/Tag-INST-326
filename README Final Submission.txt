@@ -82,7 +82,8 @@ Yalemzewed	                                  @Ywodaje
 
 
 FUNCTION ATTRIBUTE TABLE
-Method/Function	                           Primary Author	                                    Techniques Demonstrated
-place_players_and_hiding_spots	              Yalemzewed	                     Lists, Dictionaries, Random Sampling, Sequence unpacking
-check_for_tag	                              Fatmata 	                        Conditionals, Iteration, Return values
-play_game	                                  Yalemzewed	                         Loops,Input validation, Game flow control
+| Method/Function                   | Primary Author     | Techniques Demonstrated                                      |
+|----------------------------------|--------------------|---------------------------------------------------------------|
+| place_players_and_hiding_spots   | Yalemzewed             | Lists, Dictionaries, Random Sampling, Dynamic Role Assignment |
+| check_for_tag                    | Fatmata                | Conditionals, Iteration, Return values                        |
+| play_game                        | Yalemzewed            | Loops, Input validation, Game flow control                    |
