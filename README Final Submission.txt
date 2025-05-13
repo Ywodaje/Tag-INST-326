@@ -54,18 +54,25 @@ If Maya is tagged, the game ends with a message.
 If not, the game continues and the player moves again.
 
 ANNOTATED BIBLIOGRAPHY
+INST 326 Lecture Videos and Slides (UMD)Our class lectures were the foundation
+ of this entire project. We based our logic on topics covered in class such as: 
+ separating concerns into functions, writing docstrings, handling user input, 
+ using random.sample() for sampling, and combining loops with dictionaries. 
+These helped us understand not only how to write the game, but how to keep it organized and readable.
 
+W3Schools – Python Basics
+Link: https://www.w3schools.com/python/
+We used W3Schools as a quick reference for understanding basic syntax, how to 
+use dictionaries, and how to work with loops and conditional statements. 
+It helped us understand the difference between if, elif, and else, as well as 
+how to properly use functions and return values in Python.
 
-
-
-
-
-
-
-
-
-
-
+Bro Code – Python for Beginners YouTube Series
+Link: https://www.youtube.com/c/BroCodez
+This channel was used to better understand how to structure beginner-friendly 
+programs. Specifically, the videos on loops, user input, and basic game logic 
+helped us think through how to break our game into smaller steps and keep our 
+functions focused on one task.
 
 
 TEAM MEMBERS AND GITHUB USERNAMES
@@ -76,6 +83,6 @@ Yalemzewed	                                  @Ywodaje
 
 FUNCTION ATTRIBUTE TABLE
 Method/Function	                           Primary Author	                                    Techniques Demonstrated
-place_players_and_hiding_spots	              Yalemzewed	                         Lists, Dictionaries, Random Sampling, Sequence unpacking
-check_for_tag	                              Fatmata 	                             Conditionals, Iteration, Return values
-play_game	                                  Shared	                             Loops,Input validation, Game flow control
+place_players_and_hiding_spots	              Yalemzewed	                     Lists, Dictionaries, Random Sampling, Sequence unpacking
+check_for_tag	                              Fatmata 	                        Conditionals, Iteration, Return values
+play_game	                                  Yalemzewed	                         Loops,Input validation, Game flow control
